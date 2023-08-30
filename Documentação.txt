@@ -1,0 +1,34 @@
+				TYPESCRIPT
+
+npm init -y
+npm i typescript -D para instalar como dependencia dev
+
+
+chamar o typescript compiler
+npx tsc index.ts
+
+
+tsconfig.json
+ npx tsc --init
+
+package.json:
+"scripts": {
+    "start": "npx tsc && node index.js",
+
+
+
+
+trabalhando com objects:
+console.log('Ola!')
+
+type produtoLoja = {
+    nome: string,
+    preco: number,
+    unidades: number
+};
+
+let meuProduto: produtoLoja = {
+    nome: "Tenis",
+    preco: 100.00,
+    unidades: 5
+}

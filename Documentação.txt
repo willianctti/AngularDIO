@@ -86,3 +86,14 @@ class Character {
 				ANGULAR
 
 
+
+
+
+ng new
+ng g c/m/s
+
+]
+<input type="text" [value]="placeholder"
+(input)="placeholder = $any($event.target).value"
+>
+<p>{{placeholder}}</p>

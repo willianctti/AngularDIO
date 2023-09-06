@@ -98,3 +98,130 @@ ng g c/m/s
 (input)="placeholder = $any($event.target).value"
 >
 <p>{{placeholder}}</p>
+
+
+
+
+
+Diretivas estruturais
+export class AppComponent {
+  title = 'diretivas';
+  isAliveCard = false;
+}
+
+
+
+ngIf
+
+<app-card *ngIf="isAliveCard; else test"; ></app-card>
+
+<ng-template #test>
+  <p>Bloco secreto</p>
+</ng-template>
+
+
+
+ngFor
+
+  produtos:string[] = []
+
+  constructor() {
+    this.produtos = [
+      "mouse",
+      "teclado",
+      "cabo",
+      "fonte"
+    ]
+  }
+
+<ul>
+    <li *ngFor="let p of produtos"> {{p}}</li>
+</ul>
+
+
+
+
+switch e switch case
+<div [ngSwitch]="menuType">
+    <div *ngSwitchDefault>
+        <ul>
+            <li>Nada a mostra</li>
+        </ul>
+    </div>
+
+    <div *ngSwitchCase="'admin'">
+        <ul>
+            <li>Excluir</li>
+            <li>Adicionar</li>
+        </ul>
+    </div>
+</div>
+
+
+  menuType:string = 'admin'
+
+
+
+
+
+ngClass
+
+  estilo:string = "enable"
+
+<p [ngClass]="estilo">comp-atributos works!</p>
+
+
+.enable {
+    color: blue;
+}
+
+.disable {
+    color: red;
+}
+
+
+ou 
+
+
+<button (click)="trocar()">trocar</button>
+ trocar() {
+    if(this.estilo === 'disable') {
+      this.estilo = 'enable'
+    } else {
+      this.estilo = 'disable'
+    }
+  }
+
+
+
+
+
+ngModel
+import {FormsModule} from '@angular/forms'
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+
+
+
+<input type="text" [(ngModel)]="item">
+  item:string = "";
+<p>{{item}}</p>
+
+
+ lista:string[] = []
+
+  adicionarLista() {
+    this.lista.push(this.item)
+  }
+
+<input type="text" [(ngModel)]="item">
+<button (click)="adicionarLista()">Adicionar</button>
+<p>{{item}}</p>
+
+<ul>
+    <li *ngFor="let elemento of lista"> {{ elemento}}</li>
+</ul>
+
+<br>

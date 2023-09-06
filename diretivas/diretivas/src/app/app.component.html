@@ -1,0 +1,8 @@
+<app-card *ngIf="isAliveCard; else test"></app-card>
+
+<app-comp-atributos></app-comp-atributos>
+<ng-template #test>
+  <p>Bloco secreto</p>
+</ng-template>
+
+<router-outlet></router-outlet>

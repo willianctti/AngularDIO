@@ -1,0 +1,20 @@
+<h1>Teste</h1>
+<button>ALo</button>
+<ul>
+    <li *ngFor="let p of produtos"> {{p}}</li>
+</ul>
+
+<div [ngSwitch]="menuType">
+    <div *ngSwitchDefault>
+        <ul>
+            <li>Nada a mostra</li>
+        </ul>
+    </div>
+
+    <div *ngSwitchCase="'admin'">
+        <ul>
+            <li>Excluir</li>
+            <li>Adicionar</li>
+        </ul>
+    </div>
+</div>

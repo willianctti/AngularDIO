@@ -83,7 +83,21 @@ class Character {
 
 
 
-				ANGULAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+					ANGULAR
 
 
 
@@ -103,7 +117,7 @@ ng g c/m/s
 
 
 
-Diretivas estruturais
+Diretivas estruturais;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 export class AppComponent {
   title = 'diretivas';
   isAliveCard = false;
@@ -111,7 +125,7 @@ export class AppComponent {
 
 
 
-ngIf
+ngIf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 <app-card *ngIf="isAliveCard; else test"; ></app-card>
 
@@ -121,7 +135,7 @@ ngIf
 
 
 
-ngFor
+ngFor;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   produtos:string[] = []
 
@@ -141,7 +155,8 @@ ngFor
 
 
 
-switch e switch case
+switch e switch case;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 <div [ngSwitch]="menuType">
     <div *ngSwitchDefault>
         <ul>
@@ -164,7 +179,7 @@ switch e switch case
 
 
 
-ngClass
+ngClass;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   estilo:string = "enable"
 
@@ -196,7 +211,8 @@ ou
 
 
 
-ngModel
+ngModel;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 import {FormsModule} from '@angular/forms'
  imports: [
     BrowserModule,
@@ -225,3 +241,12 @@ import {FormsModule} from '@angular/forms'
 </ul>
 
 <br>
+
+
+
+
+
+
+
+módulos:;::;;;;;;;;;;;;;;;;;;;
+
